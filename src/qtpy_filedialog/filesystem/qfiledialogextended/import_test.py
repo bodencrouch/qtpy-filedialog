@@ -4,7 +4,7 @@ import sys
 
 from pathlib import Path
 
-src = Path(r"G:/GitHub/Andastra/vendor/PyKotor/Libraries/PyKotor/src")
+src = Path(r"G:/path/to/src")
 if str(src) not in sys.path:
     sys.path.insert(0, str(src))
 print("src in sys.path:", str(src) in sys.path)

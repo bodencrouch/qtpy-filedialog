@@ -1,21 +1,15 @@
 # qtpy-filedialog
 
-Extended Qt file dialog / filesystem explorer stack aiming at Qt C++ parity. `CaseAwarePath` replaced with `pathlib.Path`. TPC/KotOR icon previews are optional stubs.
+File dialog / filesystem explorer stack on top of qtpy. Tries to behave closer to the C++ Qt dialogs than the stock Python wrappers.
+
+Uses plain `pathlib.Path`. Extra file-type icon plugins are optional; without them you just get generic icons.
 
 ## Install
 
 ```bash
-pip install -e .
-# or from GitHub:
-pip install git+https://github.com/bodencrouch/qtpy-filedialog
+pip install git+https://github.com/bodencrouch/qtpy-filedialog.git
+pip install qtpy PyQt5
 ```
-
-## Origin
-
-Extracted from the [PyKotor](https://github.com/bodencrouch/PyKotor) monorepo `utility` / related packages.
-KotOR-specific couplings were removed or made optional for standalone use.
-
-
 
 ## License
 

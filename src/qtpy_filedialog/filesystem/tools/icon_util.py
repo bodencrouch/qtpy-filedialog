@@ -183,8 +183,8 @@ def get_image_from_resource(
 
     if filepath_obj.suffix.lower() == ".tpc":
         try:
-            from qtpy_filedialog._optional_pykotor import resource.formats.tpc.tpc_auto import read_tpc
-            from qtpy_filedialog._optional_pykotor import resource.formats.tpc.tpc_data import TPCTextureFormat
+            from qtpy_filedialog._optional_extras import resource.formats.tpc.tpc_auto import read_tpc
+            from qtpy_filedialog._optional_extras import resource.formats.tpc.tpc_data import TPCTextureFormat
 
             tpc = read_tpc(filepath_obj.read_bytes())
             best_mipmap = next(
@@ -193,7 +193,7 @@ def get_image_from_resource(
             width, height, data = tpc.convert(TPCTextureFormat.RGBA, best_mipmap)
         except ImportError:
             RobustLogger().warning(
-                f"PyKotor not available for resource type: {filepath_obj.suffix.lower()!r}"
+                f"No decoder available for resource type: {filepath_obj.suffix.lower()!r}"
             )
         else:
             return row, (width, height, data)

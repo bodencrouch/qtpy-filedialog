@@ -1,4 +1,4 @@
-"""pathlib stand-in for former pykotor CaseAwarePath."""
+"""pathlib Path stand-in for case-aware path helpers."""
 from __future__ import annotations
 from pathlib import Path
 

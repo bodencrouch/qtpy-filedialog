@@ -73,11 +73,11 @@ def update_sys_path(path: pathlib.Path):
 
 file_absolute_path = pathlib.Path(__file__).resolve()
 
-if pykotor_path.exists():
-pykotor_gl_path = file_absolute_path.parents[8] / "Libraries" / "PyKotorGL" / "src" / "pykotor"
-if pykotor_gl_path.exists():
+if vendor_lib_path.exists():
+vendor_gl_path = file_absolute_path.parents[8] / "Libraries" / "VendorGL" / "src" / "VendorLib"
+if vendor_gl_path.exists():
 if utility_path.exists():
-toolset_path = file_absolute_path.parents[8] / "Tools/HolocronToolset/src/toolset"
+toolset_path = file_absolute_path.parents[8] / "Tools/ExampleToolset/src/toolset"
 if toolset_path.exists():
     update_sys_path(toolset_path.parent)
     if __name__ == "__main__":
@@ -3141,7 +3141,7 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     print("<SDM> [adjust_view_size scope] app: ", app)
 
-    base_path = Path(r"C:\Program Files (x86)\Steam\steamapps\common\swkotor").resolve()
+    base_path = Path(r"C:\Games\ExampleApp").resolve()
     print("<SDM> [adjust_view_size scope] base_path: ", base_path)
 
     main_window = MainWindow(base_path)

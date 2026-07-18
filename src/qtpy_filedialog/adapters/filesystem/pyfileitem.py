@@ -39,9 +39,9 @@ def update_sys_path(_path: pathlib.Path):
 
 file_absolute_path = pathlib.Path(__file__).resolve()
 
-if pykotor_path.exists():
-pykotor_gl_path = file_absolute_path.parents[6] / "Libraries" / "PyKotorGL" / "src" / "pykotor"
-if pykotor_gl_path.exists():
+if vendor_lib_path.exists():
+vendor_gl_path = file_absolute_path.parents[6] / "Libraries" / "VendorGL" / "src" / "VendorLib"
+if vendor_gl_path.exists():
 if utility_path.exists():
 toolset_path = file_absolute_path.parents[3] / "toolset"
 if toolset_path.exists():
